@@ -9,6 +9,12 @@ strategy, so nothing can quietly cheat.
 **The method is the point.** Same code + the same cached candles ⇒ the same numbers,
 forever. Clone it, run it, and you should reproduce the result exactly.
 
+> ⚠️ **For education and research only — not financial advice, not production-ready.**
+> These strategies *lose money* in the backtest; this is a measurement, not a trading product.
+> Backtested performance does not predict the future, crypto trading can lose you everything,
+> and this is an unaudited research prototype provided "as is" (see the root
+> [LICENSE](../LICENSE)). Do your own research — any decision is your own responsibility.
+
 ## What's here (code only)
 
 ```

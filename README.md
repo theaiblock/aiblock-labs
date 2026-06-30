@@ -11,6 +11,21 @@ holds the code so you can re-run the experiments and check the numbers yourself.
 > This is **code only** — no datasets, no rendered charts, no video assets. Each project
 > fetches its own public data and regenerates its own outputs when you run it.
 
+## ⚠️ Disclaimer
+
+**For education and research only. Not financial advice. Not production-ready.**
+
+This code exists to *measure and demonstrate* — it is not a trading product. In fact the
+strategies here **lose money** in the backtest; that's the whole point of the videos. Nothing
+in this repo is an investment recommendation or a signal to trade real funds.
+
+- Backtested or past performance does **not** predict future results.
+- Crypto trading carries a substantial risk of loss; you can lose everything.
+- The code is provided "as is", with no warranty (see [LICENSE](./LICENSE)). It is a research
+  prototype — unaudited, not hardened, and not meant for live trading as-is.
+- Do your own research. Any decision you make is solely your own responsibility; the authors
+  accept no liability for any loss arising from use of this code.
+
 ## Projects
 
 | Folder | What it is |
