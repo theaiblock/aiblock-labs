@@ -11,9 +11,9 @@ holds the code so you can re-run the experiments and check the numbers yourself.
 > This is **code only** — no datasets, no rendered charts, no video assets. Each project
 > fetches its own public data and regenerates its own outputs when you run it.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
-**For education and research only. Not financial advice. Not production-ready.**
+⚠️ **For education and research only. Not financial advice. Not production-ready.**
 
 This code exists to *measure and demonstrate* — it is not a trading product. In fact the
 strategies here **lose money** in the backtest; that's the whole point of the videos. Nothing
