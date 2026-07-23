@@ -30,6 +30,7 @@ in this repo is an investment recommendation or a signal to trade real funds.
 
 | Folder | What it is |
 |---|---|
+| [`evolving-quant-agents/`](./evolving-quant-agents) | Can an LLM *evolve* a trading strategy? An agent rewrites its own strategy over ten generations, scored by an evaluator we own — run twice, changing only the scoreboard. The open-book run hit 0.90 Sharpe and held 0.23 on a sealed test; the closed-book run generalized better. Neither made money. |
 | [`claude-hyperliquid-backtest/`](./claude-hyperliquid-backtest) | Let an LLM (Claude) write trading strategies, then judge them honestly: one deterministic, event-driven backtest on real Hyperliquid history — same data, fees, slippage, and out-of-sample split for every strategy, against dumb baselines. |
 
 More projects land here as the channel ships them.

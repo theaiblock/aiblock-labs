@@ -1,0 +1,14 @@
+# Regenerable — `python fetch.py` rebuilds it
+data/
+*.parquet
+*.csv
+
+# Evolution run output: logs, model responses, population DB. Megabytes, and regenerable.
+runs/
+
+# Local
+__pycache__/
+*.pyc
+.venv/
+shinka-venv/
+.env
