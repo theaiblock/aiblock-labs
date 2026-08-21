@@ -8,8 +8,11 @@ The promise of the channel is the moat: **transparent, data-backed research**. E
 video is a real experiment — thesis, data, honest verdict (wins *and* blowups). This repo
 holds the code so you can re-run the experiments and check the numbers yourself.
 
-> This is **code only** — no datasets, no rendered charts, no video assets. Each project
-> fetches its own public data and regenerates its own outputs when you run it.
+> This is **code, not data** — no bulk datasets, no rendered charts, no video assets. Each
+> project fetches its own public data and regenerates its own outputs when you run it. One
+> exception: `momentum-research-loop/` also commits the small per-run records its explorer
+> reads, so the dashboard has something to show on a fresh clone. The price data it ran on
+> is still fetched, not committed.
 
 ## Disclaimer
 
@@ -30,6 +33,7 @@ in this repo is an investment recommendation or a signal to trade real funds.
 
 | Folder | What it is |
 |---|---|
+| [`momentum-research-loop/`](./momentum-research-loop) | A stateful research loop for BTC momentum. Every run starts a *fresh* coding agent that reads a mandate, an append-only journal and your steering file, picks one untested hypothesis, backtests it with real fees, slippage and funding, runs Monte Carlo and walk-forward validation, then writes down what happened so the next agent doesn't repeat it. Four Markdown files are the entire interface. Ships with a Streamlit explorer and two completed runs. |
 | [`evolving-quant-agents/`](./evolving-quant-agents) | Can an LLM *evolve* a trading strategy? An agent rewrites its own strategy over ten generations, scored by an evaluator we own — run twice, changing only the scoreboard. The open-book run hit 0.90 Sharpe and held 0.23 on a sealed test; the closed-book run generalized better. Neither made money. |
 | [`claude-hyperliquid-backtest/`](./claude-hyperliquid-backtest) | Let an LLM (Claude) write trading strategies, then judge them honestly: one deterministic, event-driven backtest on real Hyperliquid history — same data, fees, slippage, and out-of-sample split for every strategy, against dumb baselines. |
 

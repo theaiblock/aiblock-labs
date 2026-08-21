@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv/
+logs/
+reports/
+# Failed first-attempt logs from the offline sandbox. Kept locally as the
+# evidence JOURNAL.md refers to; not published, since they are only DNS
+# failures and carry absolute local paths.
+runs/*/*.sandbox-attempt.log
+
+# The repo-root .gitignore drops *.csv everywhere, because every other project
+# here regenerates its data. This one is different: the Streamlit explorer reads
+# the per-run artifacts directly, so a clone with no runs opens an empty app.
+# Re-include the small run records...
+!runs/*/artifacts/*.csv
+# ...but never the bulk price data, which the explorer never reads and a
+# backtest re-downloads.
+runs/*/artifacts/ohlcv_*.csv

@@ -1,0 +1,170 @@
+{
+  "artifacts": [
+    {
+      "path": "artifacts/equity.csv",
+      "sha256": "c7781abbd9326462c4ce4f99afbe5e635e98cfa91d3a0b4a11933276ee86d183",
+      "size_bytes": 142719
+    },
+    {
+      "path": "artifacts/metrics.csv",
+      "sha256": "fd7c18fcaa1dfb024f7b76cf5aa446af3d13921168a9052f3021995d1cbc8c88",
+      "size_bytes": 428
+    },
+    {
+      "path": "artifacts/ohlcv_BTC-USDT.csv",
+      "sha256": "e35c0065f473ef545e1a6a4c287e7b7bc4a16024fc74cff95c064f74ac32ad8b",
+      "size_bytes": 85516
+    },
+    {
+      "path": "artifacts/positions.csv",
+      "sha256": "658e7ae39a95b20a8ffdf0a61fd5dbd89c23fb2a2b58ec93ab0353ec56faf38e",
+      "size_bytes": 21934
+    },
+    {
+      "path": "artifacts/trades.csv",
+      "sha256": "92aa4866c151f4097269f9e3d918c96a22ca017f0d5089e3fa8053b1054a9430",
+      "size_bytes": 610
+    },
+    {
+      "path": "artifacts/validation.json",
+      "sha256": "aca7b894814e752e892903e80a4ee284f6efba0a447b5d865201547e96ebd803",
+      "size_bytes": 1893
+    },
+    {
+      "path": "code/signal_engine.py",
+      "sha256": "1889742cbb9285ac7cfd70cbe5ea82e9ebc688bb9bbd88eb20bf1a42e2af1962",
+      "size_bytes": 850
+    },
+    {
+      "path": "config.json",
+      "sha256": "b0911e6a5b1d37946ea2dc54d209c0df9e212aa5bc5cb2c990bcaf5901a8fe48",
+      "size_bytes": 1202
+    }
+  ],
+  "backtest": {
+    "codes": [
+      "BTC-USDT"
+    ],
+    "end_date": "2025-12-31",
+    "engine": "daily",
+    "initial_cash": 1000000,
+    "interval": "1D",
+    "source": "binance",
+    "start_date": "2022-01-01"
+  },
+  "data_sources": [
+    "binance"
+  ],
+  "generated_at": "2026-08-19T15:01:39.907134Z",
+  "metrics": {
+    "annual_return": 0.09621538543373087,
+    "avg_holding_days": 210.2,
+    "avg_turnover": 0.002773,
+    "benchmark_return": 0.836617,
+    "calmar": 0.2441,
+    "excess_return": -0.133277,
+    "final_value": 1703339.3908697686,
+    "information_ratio": -0.1923,
+    "max_consecutive_loss": 1,
+    "max_drawdown": -0.3942364051380817,
+    "profit_factor": 3.6519,
+    "profit_loss_ratio": 1.2173,
+    "sharpe": 0.45253988448913673,
+    "sortino": 0.5353,
+    "total_return": 0.7033393908697685,
+    "total_turnover": 4.052055,
+    "trade_count": 4,
+    "win_rate": 0.75
+  },
+  "reproducibility": {
+    "config_hash": "b0911e6a5b1d37946ea2dc54d209c0df9e212aa5bc5cb2c990bcaf5901a8fe48",
+    "strategy_hash": "1889742cbb9285ac7cfd70cbe5ea82e9ebc688bb9bbd88eb20bf1a42e2af1962"
+  },
+  "run_dir": "./runs/20260819T150036Z-sma-50-200",
+  "schema_version": "0.1",
+  "validation": {
+    "bootstrap": {
+      "ci_lower": -0.3858,
+      "ci_upper": 1.2579,
+      "confidence": 0.95,
+      "median_sharpe": 0.4645,
+      "n_bootstrap": 1000,
+      "observed_sharpe": 0.4528,
+      "prob_positive": 0.857
+    },
+    "monte_carlo": {
+      "actual_max_dd": -0.1484,
+      "actual_sharpe": 10.2223,
+      "n_simulations": 1000,
+      "n_trades": 4,
+      "p_value_max_dd": 0.529,
+      "p_value_sharpe": 0.337,
+      "simulated_sharpe_mean": 9.7653,
+      "simulated_sharpe_p5": 1.6865,
+      "simulated_sharpe_p95": 23.9403,
+      "simulated_sharpe_std": 6.799
+    },
+    "walk_forward": {
+      "consistency_rate": 0.6,
+      "n_windows": 5,
+      "profitable_windows": 3,
+      "return_mean": 0.142912,
+      "return_std": 0.315749,
+      "sharpe_mean": 0.3049,
+      "sharpe_std": 0.7078,
+      "windows": [
+        {
+          "end": "2022-10-19",
+          "max_dd": 0.0,
+          "return": 0.0,
+          "sharpe": 0.0,
+          "start": "2022-01-01",
+          "trades": 0,
+          "win_rate": 0.0,
+          "window": 1
+        },
+        {
+          "end": "2023-08-07",
+          "max_dd": -0.190734,
+          "return": 0.234256,
+          "sharpe": 0.7463,
+          "start": "2022-10-20",
+          "trades": 1,
+          "win_rate": 1.0,
+          "window": 2
+        },
+        {
+          "end": "2024-05-25",
+          "max_dd": -0.207463,
+          "return": 0.703343,
+          "sharpe": 1.342,
+          "start": "2023-08-08",
+          "trades": 1,
+          "win_rate": 1.0,
+          "window": 3
+        },
+        {
+          "end": "2025-03-13",
+          "max_dd": -0.268124,
+          "return": 0.002862,
+          "sharpe": 0.1939,
+          "start": "2024-05-26",
+          "trades": 1,
+          "win_rate": 1.0,
+          "window": 4
+        },
+        {
+          "end": "2025-12-31",
+          "max_dd": -0.256729,
+          "return": -0.225899,
+          "sharpe": -0.7577,
+          "start": "2025-03-14",
+          "trades": 1,
+          "win_rate": 0.0,
+          "window": 5
+        }
+      ]
+    }
+  },
+  "warnings": []
+}

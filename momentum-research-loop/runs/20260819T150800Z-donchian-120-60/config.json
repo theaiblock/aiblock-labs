@@ -1,0 +1,30 @@
+{
+  "codes": ["BTC-USDT"],
+  "start_date": "2022-01-01",
+  "end_date": "2025-12-31",
+  "source": "binance",
+  "interval": "1D",
+  "engine": "daily",
+  "initial_cash": 1000000,
+  "leverage": 1.0,
+  "maker_rate": 0.0002,
+  "taker_rate": 0.0005,
+  "slippage": 0.0005,
+  "margin_mode": "isolated",
+  "funding_rate": 0.0001,
+  "validation": {
+    "monte_carlo": {"n_simulations": 1000, "seed": 42},
+    "bootstrap": {"n_bootstrap": 1000, "confidence": 0.95, "seed": 42},
+    "walk_forward": {"n_windows": 5}
+  },
+  "research_assumptions": {
+    "signal": "Enter long when close >= prior 120-complete-bar rolling high; remain long until close <= prior 60-complete-bar rolling low; otherwise flat",
+    "execution": "Channels exclude the current bar; signals shift one bar in the native runner and execute at next bar open",
+    "exposure": "Long/flat, maximum 1.0 target weight, no leverage above 1x",
+    "fees": "Taker 5 bps on entry; maker 2 bps on exit",
+    "slippage": "5 bps adverse on every entry and exit",
+    "funding": "Fixed +1 bp per native daily fallback settlement while a position is open; long pays",
+    "validation_note": "Monte Carlo permutes realized trade PnLs and does not by itself test parameter-selection overfit"
+  }
+}
+
