@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+workspaces/
+runs/
+logs/
+*.csv
+result.json
+tasks/*/train/manifest.json
+tasks/*/sealed/manifest.json

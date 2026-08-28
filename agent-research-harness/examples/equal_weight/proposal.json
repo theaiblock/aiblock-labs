@@ -1,0 +1,5 @@
+{
+  "slug": "equal-weight-baseline",
+  "hypothesis": "Equal weight establishes the simplest allocation baseline before the agent explores data-dependent rules.",
+  "expected_direction": "Baseline only; no improvement claim."
+}
