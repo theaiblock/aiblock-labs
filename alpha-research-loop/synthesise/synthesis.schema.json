@@ -1,0 +1,132 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "headline",
+    "findings",
+    "families",
+    "model_comparison",
+    "regime_dependence",
+    "caveats",
+    "next_experiments",
+    "next_prompt"
+  ],
+  "properties": {
+    "headline": {
+      "type": "string",
+      "description": "One sentence: what this population of ideas shows."
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim",
+          "evidence",
+          "strength"
+        ],
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string",
+            "description": "The numbers from the analysis that support the claim, copied exactly."
+          },
+          "strength": {
+            "type": "string",
+            "enum": [
+              "strong",
+              "moderate",
+              "weak"
+            ]
+          }
+        }
+      }
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "labels",
+          "mechanism",
+          "sharpe",
+          "verdict",
+          "verdict_note"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mechanism": {
+            "type": "string",
+            "description": "What the family changes about the benchmark, in plain words."
+          },
+          "sharpe": {
+            "type": "number",
+            "description": "Median Sharpe of the family's ideas, copied from the analysis."
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "above",
+              "unclear",
+              "below",
+              "mixed"
+            ],
+            "description": "From the 95% intervals vs the benchmark."
+          },
+          "verdict_note": {
+            "type": "string",
+            "description": "The Sharpe difference and interval that support the verdict, copied exactly."
+          }
+        }
+      }
+    },
+    "model_comparison": {
+      "type": "string"
+    },
+    "regime_dependence": {
+      "type": "string"
+    },
+    "caveats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_experiments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "experiment",
+          "reason"
+        ],
+        "properties": {
+          "experiment": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "next_prompt": {
+      "type": "string",
+      "description": "The research prompt for the next round of this pipeline, written in the same form as the research prompt above: what to improve and why, grounded in this analysis. No numbers from the results, no code."
+    }
+  }
+}

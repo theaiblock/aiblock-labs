@@ -1,0 +1,15 @@
+# Code only. Data, run outputs and caches regenerate on run.
+.venv/
+__pycache__/
+*.pyc
+.cache/
+.numba_cache/
+data/
+populations/
+*.log
+*.parquet
+*.csv
+*.csv.gz
+*.png
+*.mp4
+.env

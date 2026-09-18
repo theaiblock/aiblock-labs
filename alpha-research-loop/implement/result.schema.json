@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "notes"],
+  "properties": {
+    "status": {"type": "string", "enum": ["done", "blocked"]},
+    "notes": {"type": "string", "description": "Interpretation choices made, or why it is blocked."}
+  }
+}

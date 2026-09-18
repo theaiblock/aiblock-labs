@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "thesis", "change_vs_benchmark", "signal_rule", "parameters",
+               "warmup_days", "expected_vs_benchmark", "falsified_if"],
+  "properties": {
+    "title": {"type": "string", "description": "Short name for the idea, under 8 words."},
+    "thesis": {"type": "string", "description": "Plain English: why this should beat the benchmark. 2-3 sentences."},
+    "change_vs_benchmark": {"type": "string", "description": "Exactly what differs from the benchmark signal."},
+    "signal_rule": {"type": "string", "description": "Precise, implementable definition of each coin's target weight on day t (0 outside the universe, a day's weights sum to at most 1), using only data up to day t."},
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "value", "meaning"],
+        "properties": {
+          "name": {"type": "string"},
+          "value": {"type": "number"},
+          "meaning": {"type": "string"}
+        }
+      }
+    },
+    "warmup_days": {"type": "integer", "description": "Days of history needed before the first non-zero position."},
+    "expected_vs_benchmark": {"type": "string", "enum": ["beats", "matches", "trails"]},
+    "falsified_if": {"type": "string", "description": "The backtest result that would show this idea is wrong."}
+  }
+}
